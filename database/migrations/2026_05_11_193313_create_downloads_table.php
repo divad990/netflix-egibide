@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('content_id')
                 ->constrained()
                 ->cascadeOnDelete();
-            $table->timestamps();
+            $table->timestamp('download_at');
         });
     }
 

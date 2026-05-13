@@ -7,4 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Download extends Model
 {
     //
+    protected $fillable = [
+        'user_id',
+        'content_id',
+        'download_at'
+    ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+    public function content(){
+        return $this->belongsTo(Content::class);
+    }
+    
 }
